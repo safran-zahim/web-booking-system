@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { api } from '@/services/api';
-import { Court, Sport } from '@/types';
+import type { Court, Sport } from '@/types';
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
@@ -62,13 +62,13 @@ export default function AdminCourts() {
                                 <Input
                                     id="name"
                                     value={newCourt.name}
-                                    onChange={(e) => setNewCourt({ ...newCourt, name: e.target.value })}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewCourt({ ...newCourt, name: e.target.value })}
                                     placeholder="e.g., Badminton Court 3"
                                 />
                             </div>
                             <div className="grid gap-2">
                                 <Label htmlFor="sport">Sport</Label>
-                                <Select onValueChange={(val) => setNewCourt({ ...newCourt, sportId: val })}>
+                                <Select onValueChange={(val: string) => setNewCourt({ ...newCourt, sportId: val })}>
                                     <SelectTrigger>
                                         <SelectValue placeholder="Select sport" />
                                     </SelectTrigger>
@@ -82,7 +82,7 @@ export default function AdminCourts() {
                                 <Input
                                     id="type"
                                     value={newCourt.type}
-                                    onChange={(e) => setNewCourt({ ...newCourt, type: e.target.value })}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewCourt({ ...newCourt, type: e.target.value })}
                                     placeholder="e.g., Indoor / Clay"
                                 />
                             </div>
@@ -92,7 +92,7 @@ export default function AdminCourts() {
                                     id="price"
                                     type="number"
                                     value={newCourt.price}
-                                    onChange={(e) => setNewCourt({ ...newCourt, price: e.target.value })}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewCourt({ ...newCourt, price: e.target.value })}
                                     placeholder="20"
                                 />
                             </div>

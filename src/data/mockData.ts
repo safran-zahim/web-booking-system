@@ -1,4 +1,4 @@
-import { Booking, Court, Sport } from '../types';
+import type { Booking, Court, Sport } from '../types';
 
 // Helper to get dynamic dates so the demo always looks fresh
 const getTodayDate = () => new Date().toISOString().split('T')[0];

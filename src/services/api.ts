@@ -1,4 +1,4 @@
-import { Booking, Court, Sport } from '../types';
+import type { Booking, Court, Sport } from '../types';
 import { bookings, courts, sports } from '../data/mockData';
 
 // Simulate network delay (500ms) to make it feel real

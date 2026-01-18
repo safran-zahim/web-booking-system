@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { format } from 'date-fns';
-import { Booking, Court } from '@/types';
+import type { Booking, Court } from '@/types';
 import { api } from '@/services/api';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';

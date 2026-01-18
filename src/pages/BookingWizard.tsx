@@ -115,12 +115,12 @@ export default function BookingWizard() {
                     {/* Left Column: Calendar & Court List */}
                     <div className="md:col-span-5 space-y-6">
                         <Card>
-                            <CardContent className="p-4">
+                            <CardContent className="p-4 flex justify-center">
                                 <Calendar
                                     mode="single"
                                     selected={date}
                                     onSelect={setDate}
-                                    className="rounded-md border shadow-sm w-full"
+                                    className="rounded-md border shadow-sm"
                                     disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
                                 />
                             </CardContent>
