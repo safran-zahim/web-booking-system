@@ -115,7 +115,7 @@ export default function BookingWizard() {
                     {/* Left Column: Calendar & Court List */}
                     <div className="md:col-span-5 space-y-6">
                         <Card>
-                            <CardContent className="p-4 flex justify-center">
+                            <CardContent className="p-4 flex flex-col items-center">
                                 <Calendar
                                     mode="single"
                                     selected={date}
